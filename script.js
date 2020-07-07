@@ -10,16 +10,23 @@ counter.textContent = counterVal;
 const countingDecrease = () => {
     counterVal--;
     counter.textContent = counterVal;
+    if (counterVal < 0) {
+        counter.style.color = 'red'
+    }
 }
 
 const resetCounter = () => {
     counterVal = 0;
     counter.textContent = counterVal;
+    counter.style.color = 'black';
 }
 
 const countingIncrease = () => {
     counterVal++;
     counter.textContent = counterVal;
+    if (counterVal > 0) {
+        counter.style.color = 'green'
+    }
 }
 
 
